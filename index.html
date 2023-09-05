@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube</title>
+    <link rel="shortcut icon" href="images/youtube.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="container mx-auto">
+    <!-- nav -->
+    <section class="flex justify-between mt-10 border-b-2 border-gray-200 pb-5">
+      <div>
+        <img src="images/Logo.png" alt="Logo" />
+      </div>
+
+      <div class="flex text-center justify-center w-full">
+        <button
+          id="sort-by-view"
+          onclick="sortVideosByViews()"
+          class="btn absolute md:relative rounded-lg"
+        >
+          Sort by view
+        </button>
+      </div>
+      <div>
+        <a href="blog.html">
+          <button class="btn rounded-lg bg-red-500 text-white">Blog</button>
+        </a>
+      </div>
+    </section>
+
+    <!-- tabs -->
+    <div class="tab-container w-full">
+      <div class="tabs p-10 gap-5 mx-auto text-center flex justify-center">
+        <div
+          id="tab-container"
+          class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4"
+        ></div>
+      </div>
+    </div>
+
+    <!-- card -->
+    <div
+      id="card-container"
+      class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+    ></div>
+
+    <div class="flex justify-center items-center">
+      <div id="not-found-container" class="not-found text-center">
+        <img class="mx-auto" src="images/Icon.png" alt="" />
+        <h1 class="py-10 text-3xl font-bold">
+          Oops!! Sorry, There is no content here!
+        </h1>
+      </div>
+    </div>
+
+    <div class="loader text-center m-auto" id="loader">
+      <span class="loading loading-bars loading-xs"></span>
+      <span class="loading loading-bars loading-sm"></span>
+      <span class="loading loading-bars loading-md"></span>
+      <span class="loading loading-bars loading-lg"></span>
+    </div>
+
+    <!-- Js File -->
+    <script src="index.js"></script>
+    <style>
+      .tab {
+        background-color: #25252526;
+        color: gray;
+      }
+
+      .tab.selected {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </body>
+</html>
